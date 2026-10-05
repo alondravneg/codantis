@@ -17,7 +17,12 @@ import {
   Stethoscope,
   X,
 } from "lucide-react";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  MotionConfig,
+  type Variants,
+} from "framer-motion";
 import { useState, useEffect } from "react";
 import { whatsappData } from "@/lib/whatsapp";
 
@@ -93,7 +98,7 @@ const steps = [
   },
 ];
 
-const container = {
+const container: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -102,7 +107,7 @@ const container = {
   },
 };
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: {
     opacity: 0,
     y: 35,
@@ -112,7 +117,7 @@ const fadeUp = {
     y: 0,
     transition: {
       duration: 0.75,
-      ease: [0.22, 1, 0.36, 1],
+      ease: "easeOut",
     },
   },
 };
@@ -353,7 +358,7 @@ export default function Home() {
               transition={{
                 duration: 1,
                 delay: 0.25,
-                ease: [0.22, 1, 0.36, 1],
+                ease: "easeOut",
               }}
               className="relative"
             >
@@ -569,7 +574,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] sm:aspect-[4/4.5] sm:rounded-[2.5rem]">
@@ -902,7 +907,7 @@ export default function Home() {
                 }}
                 transition={{
                   duration: 0.35,
-                  ease: [0.22, 1, 0.36, 1],
+                  ease: "easeOut",
                 }}
                 className="mb-1 hidden rounded-2xl border border-black/[0.05] bg-white/95 px-4 py-3 shadow-[0_12px_35px_rgba(0,0,0,0.10)] backdrop-blur-xl sm:block"
               >
@@ -935,7 +940,7 @@ export default function Home() {
             transition={{
               duration: 0.6,
               delay: 0.8,
-              ease: [0.22, 1, 0.36, 1],
+              ease: "easeOut",
             }}
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.96 }}
