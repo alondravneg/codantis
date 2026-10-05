@@ -9,9 +9,11 @@ import {
   ChevronRight,
   Clock3,
   Heart,
+  Mail,
   MapPin,
   Menu,
   MessageCircle,
+  Phone,
   ShieldCheck,
   Sparkles,
   Stethoscope,
@@ -138,6 +140,7 @@ const fadeIn = {
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showWhatsappHint, setShowWhatsappHint] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
 
   useEffect(() => {
     const showTimer = setTimeout(() => {
@@ -154,6 +157,20 @@ export default function Home() {
     };
   }, []);
 
+  const copyEmail = async () => {
+    const email = "drrodolfo@codantis.com.mx";
+
+    try {
+      await navigator.clipboard.writeText(email);
+      setEmailCopied(true);
+
+      setTimeout(() => {
+        setEmailCopied(false);
+      }, 2000);
+    } catch (error) {
+      console.error("No se pudo copiar el correo:", error);
+    }
+  };
   return (
     <MotionConfig reducedMotion="user">
       <main className="overflow-x-hidden bg-[#F8F5F1] text-[#222222]">
@@ -806,7 +823,7 @@ export default function Home() {
             <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-[1.3fr_1fr_1fr]">
               <div>
                 <div className="text-lg font-semibold tracking-[0.13em]">
-                  CODANTIS
+                  CODANTIS -<p>SONRISAS SALUDABLES</p>
                 </div>
 
                 <p className="mt-3 max-w-xs text-sm leading-6 text-white/55">
@@ -843,7 +860,38 @@ export default function Home() {
                 <div className="mt-4 space-y-3 text-sm text-white/65">
                   <div className="flex items-start gap-3">
                     <MapPin size={17} className="mt-0.5 shrink-0" />
-                    <span>Monterrey, Nuevo León</span>
+                    <span>
+                      C. 15a Avenida 948-2 Sector, Colonial Cumbres, 64610
+                      Monterrey, N.L.
+                    </span>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Phone size={17} className="mt-0.5 shrink-0" />
+                    <span>
+                      <a href="tel:+528183114358" className="hover:text-white">
+                        81 83 11 43 58
+                      </a>
+                    </span>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Mail size={17} className="mt-0.5 shrink-0" />
+
+                    <button
+                      type="button"
+                      onClick={copyEmail}
+                      className="text-left transition-colors hover:text-white"
+                      aria-label="Copiar correo electrónico"
+                    >
+                      {emailCopied ? (
+                        <span className="text-[#C8A7FF]">¡Correo copiado!</span>
+                      ) : (
+                        <span className="underline-offset-4 hover:underline">
+                          drrodolfo@codantis.com.mx
+                        </span>
+                      )}
+                    </button>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -872,7 +920,7 @@ export default function Home() {
             </div>
 
             <div className="mt-14 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.16em] text-white/35 sm:flex-row">
-              <span>© 2026 CODANTIS</span>
+              <span>© 2026 CODANTIS - Powered by: <a href="https://www.instagram.com/devline.mx" target="_blank" rel="noopener noreferrer">Devl;ne México</a></span>
 
               <span>Odontología integral</span>
             </div>
