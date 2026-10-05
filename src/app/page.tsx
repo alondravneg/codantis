@@ -142,7 +142,7 @@ export default function Home() {
   useEffect(() => {
     const showTimer = setTimeout(() => {
       setShowWhatsappHint(true);
-    }, 2500);
+    }, 1200);
 
     const hideTimer = setTimeout(() => {
       setShowWhatsappHint(false);
@@ -909,20 +909,20 @@ export default function Home() {
                   duration: 0.35,
                   ease: "easeOut",
                 }}
-                className="mb-1 hidden rounded-2xl border border-black/[0.05] bg-white/95 px-4 py-3 shadow-[0_12px_35px_rgba(0,0,0,0.10)] backdrop-blur-xl sm:block"
+                className="mb-1 rounded-full border border-black/[0.05] bg-white/95 px-3.5 py-2.5 shadow-[0_12px_35px_rgba(0,0,0,0.10)] backdrop-blur-xl"
               >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#EDE6FA] text-[#5B0AB3]">
-                    <MessageCircle size={16} strokeWidth={2} />
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#EDE6FA] text-[#5B0AB3]">
+                    <MessageCircle size={14} strokeWidth={2} />
                   </div>
 
-                  <div>
-                    <p className="text-[11px] font-semibold text-[#2A272B]">
+                  <div className="whitespace-nowrap">
+                    <p className="text-[10px] font-semibold text-[#2A272B] sm:text-[11px]">
                       ¿Tienes dudas?
                     </p>
 
-                    <p className="mt-0.5 text-[10px] text-[#777279]">
-                      Escríbenos por WhatsApp
+                    <p className="mt-0.5 text-[9px] text-[#777279] sm:text-[10px]">
+                      Escríbenos
                     </p>
                   </div>
                 </div>
