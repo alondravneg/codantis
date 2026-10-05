@@ -262,41 +262,126 @@ export default function Home() {
 
             <AnimatePresence>
               {menuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10, scale: 0.98 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -10, scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
-                  className="mt-2 overflow-hidden rounded-3xl border border-black/[0.05] bg-white/95 p-3 shadow-xl backdrop-blur-xl md:hidden"
-                >
-                  <div className="flex flex-col">
-                    {[
-                      ["Tratamientos", "#tratamientos"],
-                      ["Nuestra experiencia", "#experiencia"],
-                      ["Tu visita", "#proceso"],
-                      ["Contacto", "#contacto"],
-                    ].map(([label, href]) => (
-                      <a
-                        key={href}
-                        href={href}
-                        onClick={() => setMenuOpen(false)}
-                        className="rounded-2xl px-4 py-3 text-sm text-[#444444] transition-colors hover:bg-[#F3EEF9] hover:text-[#5B0AB3]"
-                      >
-                        {label}
-                      </a>
-                    ))}
+                <>
+                  {/* Backdrop */}
+                  <motion.button
+                    type="button"
+                    aria-label="Cerrar menú"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                    onClick={() => setMenuOpen(false)}
+                    className="fixed inset-0 top-[88px] z-[-1] bg-black/10 backdrop-blur-[2px] md:hidden"
+                  />
 
-                    <a
-                      href={whatsappData.citaUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-2 flex items-center justify-center gap-2 rounded-2xl bg-[#5B0AB3] px-4 py-3 text-sm font-semibold text-white"
-                    >
-                      Agendar cita
-                      <ArrowUpRight size={16} />
-                    </a>
-                  </div>
-                </motion.div>
+                  {/* Menu panel */}
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      y: -18,
+                      scale: 0.98,
+                      transformOrigin: "top",
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                    }}
+                    exit={{
+                      opacity: 0,
+                      y: -12,
+                      scale: 0.98,
+                    }}
+                    transition={{
+                      duration: 0.35,
+                      ease: "easeOut",
+                    }}
+                    className="absolute left-0 right-0 top-[72px] px-4 md:hidden"
+                  >
+                    <nav className="overflow-hidden rounded-[2rem] border border-black/[0.05] bg-white/95 p-5 shadow-[0_20px_60px_rgba(35,20,45,0.12)] backdrop-blur-2xl">
+                      {/* Menu heading */}
+                      <div className="flex items-center justify-between px-2 pb-4">
+                        <div>
+                          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7C6C87]">
+                            Menú
+                          </p>
+
+                          <p className="mt-1 font-[var(--font-heading)] text-2xl text-[#272329]">
+                            Descubre CODANTIS
+                          </p>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => setMenuOpen(false)}
+                          aria-label="Cerrar menú"
+                          className="flex h-9 w-9 items-center justify-center rounded-full bg-[#F1EBF7] text-[#5B0AB3] transition-transform duration-200 hover:rotate-90"
+                        >
+                          <X size={17} />
+                        </button>
+                      </div>
+
+                      {/* Links */}
+                      <div className="mt-2">
+                        {[
+                          ["Tratamientos", "#tratamientos"],
+                          ["Nuestra experiencia", "#experiencia"],
+                          ["Tu visita", "#proceso"],
+                          ["Contacto", "#contacto"],
+                        ].map(([label, href], index) => (
+                          <motion.a
+                            key={href}
+                            href={href}
+                            onClick={() => setMenuOpen(false)}
+                            initial={{ opacity: 0, x: -12 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{
+                              duration: 0.35,
+                              delay: 0.08 + index * 0.06,
+                              ease: "easeOut",
+                            }}
+                            className="group flex items-center justify-between border-t border-[#EEE8EE] px-2 py-4"
+                          >
+                            <span className="text-[15px] font-medium text-[#3E3940] transition-colors duration-200 group-hover:text-[#5B0AB3]">
+                              {label}
+                            </span>
+
+                            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F4EFF8] text-[#5B0AB3] transition-all duration-200 group-hover:translate-x-1 group-hover:bg-[#EDE6FA]">
+                              <ArrowUpRight size={15} />
+                            </span>
+                          </motion.a>
+                        ))}
+                      </div>
+
+                      {/* CTA */}
+                      <motion.a
+                        href={whatsappData.citaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMenuOpen(false)}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 0.34,
+                          ease: "easeOut",
+                        }}
+                        className="mt-4 flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#5B0AB3] px-5 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(91,10,179,0.2)] transition-all duration-300 active:scale-[0.98]"
+                      >
+                        <MessageCircle size={17} />
+                        Agendar cita por WhatsApp
+                        <ArrowUpRight size={16} />
+                      </motion.a>
+
+                      {/* Small footer */}
+                      <div className="mt-5 flex items-center justify-between px-2 text-[9px] font-medium uppercase tracking-[0.18em] text-[#AAA1AA]">
+                        <span>Sonrisas saludables</span>
+                        <span>CODANTIS</span>
+                      </div>
+                    </nav>
+                  </motion.div>
+                </>
               )}
             </AnimatePresence>
           </div>
@@ -920,7 +1005,16 @@ export default function Home() {
             </div>
 
             <div className="mt-14 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.16em] text-white/35 sm:flex-row">
-              <span>© 2026 CODANTIS - Powered by: <a href="https://www.instagram.com/devline.mx" target="_blank" rel="noopener noreferrer">Devl;ne México</a></span>
+              <span>
+                © 2026 CODANTIS - Powered by:{" "}
+                <a
+                  href="https://www.instagram.com/devline.mx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Devl;ne México
+                </a>
+              </span>
 
               <span>Odontología integral</span>
             </div>
