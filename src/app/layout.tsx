@@ -15,8 +15,9 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "CODANTIS",
-  description: "Odontología integral",
+  title: "CODANTIS | Odontología Integral",
+  description:
+    "Atención dental moderna, cercana y personalizada en CODANTIS.",
 };
 
 export default function RootLayout({
@@ -34,7 +35,7 @@ export default function RootLayout({
         playfairDisplayHeading.variable
       )}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="min-h-full bg-[#F8F5F1] font-sans text-[#222222]">
         {children}
       </body>
     </html>

@@ -635,4 +635,20 @@
       transform: none;
     }
   }
+
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (max-width: 640px) {
+    html {
+      scroll-padding-top: 90px;
+    }
+  }
 }
