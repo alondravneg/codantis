@@ -4,6 +4,7 @@ import {
   ShieldCheck,
   Sparkles,
   Stethoscope,
+  ToothbrushSparkles,
 } from "lucide-react";
 
 export const services = [
@@ -20,7 +21,7 @@ export const services = [
     icon: Stethoscope,
     title: "Implantes dentales",
     description:
-      "Opciones integrales para recuperar funcionalidad, seguridad y naturalidad.",
+      "Recupera la estética y funcionalidad de tu sonrisa con implantes dentales, una solución estable y duradera para reemplazar dientes perdidos.",
     href: "/implantes-dentales-en-monterrey",
   },
   {
@@ -33,6 +34,22 @@ export const services = [
   },
   {
     number: "04",
+    icon: ToothbrushSparkles,
+    title: "Blanqueamiento dental",
+    description:
+      "Tratamientos profesionales para lograr una sonrisa más brillante y saludable.",
+    href: "/blanqueamiento-dental-en-monterrey",
+  },
+  {
+    number: "05",
+    icon: EyeClosed,
+    title: "Endodoncia",
+    description:
+      "Tratamientos especializados para salvar dientes dañados y aliviar el dolor.",
+    href: "/endodoncistas-en-monterrey",
+  },
+  {
+    number: "0",
     icon: HeartPulse,
     title: "Estética dental",
     description:
@@ -40,7 +57,7 @@ export const services = [
     href: "/estetica-dental-en-monterrey",
   },
   {
-    number: "05",
+    number: "0",
     icon: ShieldCheck,
     title: "Prevención y limpieza",
     description:

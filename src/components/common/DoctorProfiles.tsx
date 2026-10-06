@@ -30,8 +30,10 @@ const doctors: Doctor[] = [
     certifications: [
       "Certificación en Ortodoncia con Alineadores Dentales",
       "Certificado en Ortodoncia Autoligable",
+      "Ortodoncia Interceptiva en Niños",
+      "Manejo de Mini Implantes"
     ],
-    focus: ["Ortodoncia Interceptiva en Niños", "Manejo de Mini Implantes"],
+    focus: [],
   },
 ];
 
