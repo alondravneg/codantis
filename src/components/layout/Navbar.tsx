@@ -46,7 +46,7 @@ export default function Navbar() {
           >
             <div className="relative h-9 w-9 shrink-0">
               <Image
-                src="/img/logobgless.svg"
+                src="/icon.svg"
                 alt="CODANTIS"
                 fill
                 sizes="36px"
