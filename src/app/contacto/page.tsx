@@ -15,6 +15,7 @@ import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 
 import { whatsappData } from "@/lib/whatsapp";
+import Footer from "@/components/layout/Footer";
 
 const address =
   "C. 15a Avenida 948-2 Sector, Colonial Cumbres, 64610 Monterrey, N.L.";
@@ -420,16 +421,7 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* =======================================================
-          FOOTER
-      ======================================================= */}
-
-      <footer className="bg-[#211D21] px-6 py-8 text-white lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-[10px] uppercase tracking-[0.16em] text-white/35 sm:flex-row">
-          <span>© 2026 CODANTIS</span>
-          <span>Odontología integral</span>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
