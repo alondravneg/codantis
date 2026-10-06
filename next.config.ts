@@ -23,6 +23,11 @@ const nextConfig: NextConfig = {
         destination: "/periodoncista",
         permanent: true,
       },
+      {
+        source: "/rehabilitacion-dental-en-monterrey",
+        destination: "/rehabiliitacion-dental",
+        permanent: true,
+      },
     ];
   },
 };

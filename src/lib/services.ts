@@ -65,15 +65,15 @@ export const services = [
     href: "/odontopediatria-en-monterrey",
   },
   {
-    number: "0",
+    number: "08",
     icon: HeartPulse,
-    title: "Estética dental",
+    title: "Rehabilitación dental",
     description:
-      "Diseñamos tratamientos enfocados en la armonía y naturalidad de tu sonrisa.",
-    href: "/estetica-dental-en-monterrey",
+      "Recupera la funcionalidad y estética de tu sonrisa con tratamientos de rehabilitación dental personalizados.",
+    href: "/rehabilitacion-dental",
   },
   {
-    number: "0",
+    number: "09",
     icon: ShieldCheck,
     title: "Prevención y limpieza",
     description:
