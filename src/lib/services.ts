@@ -62,6 +62,6 @@ export const services = [
     title: "Prevención y limpieza",
     description:
       "Cuida tu salud bucal con revisiones y limpieza profesional de forma periódica.",
-    href: "/prevencion-y-limpieza",
+    href: "/odontologia-general-en-monterrey",
   },
 ];
