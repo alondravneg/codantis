@@ -14,7 +14,7 @@ export const services = [
     title: "Ortodoncia",
     description:
       "Tratamientos personalizados para alinear tu sonrisa y acompañarte durante todo el proceso.",
-    href: "/ortodoncia-en-monterrey",
+    href: "/ortodoncista",
   },
   {
     number: "02",

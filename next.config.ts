@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         destination: "/nosotros",
         permanent: true,
       },
+      {
+        source: "/ortodoncista-en-monterrey",
+        destination: "/ortodoncista",
+        permanent: true,
+      },
     ];
   },
 };
