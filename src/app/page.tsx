@@ -8,7 +8,9 @@ import {
   Check,
   ChevronRight,
   Clock3,
+  EyeClosed,
   Heart,
+  HeartPulse,
   Mail,
   MapPin,
   Menu,
@@ -45,13 +47,20 @@ const services = [
   },
   {
     number: "03",
-    icon: Heart,
+    icon: EyeClosed,
+    title: "Sedación consciente",
+    description:
+      "Métodos seguros y efectivos para garantizar tu comodidad durante los tratamientos.",
+  },
+  {
+    number: "04",
+    icon: HeartPulse,
     title: "Estética dental",
     description:
       "Diseñamos tratamientos enfocados en la armonía y naturalidad de tu sonrisa.",
   },
   {
-    number: "04",
+    number: "05",
     icon: ShieldCheck,
     title: "Prevención y limpieza",
     description:
@@ -914,6 +923,10 @@ export default function Home() {
                 <p className="mt-3 max-w-xs text-sm leading-6 text-white/55">
                   Odontología integral con un enfoque cercano, humano y
                   personalizado.
+                  <br />
+                  <br />
+                  Dentistas con décadas de experiencia en Cumbres, Monterrey,
+                  N.L. que te acompañan en cada etapa de tu sonrisa.
                 </p>
               </div>
 

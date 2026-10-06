@@ -15,7 +15,7 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "CODANTIS | Odontología Integral",
+  title: "CODANTIS | Dentistas en Monterrey",
   description:
     "Atención dental moderna, cercana y personalizada en CODANTIS.",
 };
