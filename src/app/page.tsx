@@ -240,7 +240,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#contacto"
+                  href="/contacto"
                   className="text-sm text-[#5F5A5D] transition-colors hover:text-[#5B0AB3]"
                 >
                   Contacto
@@ -337,7 +337,7 @@ export default function Home() {
                           ["Tratamientos", "#tratamientos"],
                           ["Nuestra experiencia", "#experiencia"],
                           ["Tu visita", "#proceso"],
-                          ["Contacto", "#contacto"],
+                          ["Contacto", "/contacto"],
                         ].map(([label, href], index) => (
                           <motion.a
                             key={href}
