@@ -27,6 +27,7 @@ import { whatsappData } from "@/lib/whatsapp";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Link from "next/link";
+import TrustStats from "@/components/common/TrustStats";
 
 const services = [
   {
@@ -35,7 +36,7 @@ const services = [
     title: "Ortodoncia",
     description:
       "Tratamientos personalizados para alinear tu sonrisa y acompañarte durante todo el proceso.",
-    href:"",
+    href: "",
   },
   {
     number: "02",
@@ -43,7 +44,7 @@ const services = [
     title: "Implantes dentales",
     description:
       "Opciones integrales para recuperar funcionalidad, seguridad y naturalidad.",
-    href:"",
+    href: "",
   },
   {
     number: "03",
@@ -59,7 +60,7 @@ const services = [
     title: "Estética dental",
     description:
       "Diseñamos tratamientos enfocados en la armonía y naturalidad de tu sonrisa.",
-    href:"",
+    href: "",
   },
   {
     number: "05",
@@ -67,15 +68,15 @@ const services = [
     title: "Prevención y limpieza",
     description:
       "Cuida tu salud bucal con revisiones y limpieza profesional de forma periódica.",
-    href:"",
+    href: "",
   },
-    {
+  {
     number: "06",
     icon: ToothbrushSparkles,
     title: "Blanqueamiento dental",
     description:
       "Tratamiento seguro y efectivo para mejorar el color de tus dientes y resaltar tu sonrisa.",
-    href:"/blanqueamiento-dental-en-monterrey",
+    href: "/blanqueamiento-dental-en-monterrey",
   },
 ];
 
@@ -326,6 +327,8 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+
+        <TrustStats />
 
         {/* =======================================================
             BENEFITS
