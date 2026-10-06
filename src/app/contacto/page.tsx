@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowUpRight,
   Clock3,
@@ -16,6 +14,7 @@ import { useState } from "react";
 
 import { whatsappData } from "@/lib/whatsapp";
 import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 
 const address =
   "C. 15a Avenida 948-2 Sector, Colonial Cumbres, 64610 Monterrey, N.L.";
@@ -64,51 +63,7 @@ export default function ContactoPage() {
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#F8F5F1] text-[#222222]">
-      {/* =======================================================
-          NAVBAR
-      ======================================================= */}
-
-      <header className="fixed inset-x-0 top-0 z-50">
-        <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center justify-between rounded-full border border-black/[0.06] bg-white/80 px-4 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.05)] backdrop-blur-xl sm:px-6">
-            <Link
-              href="/"
-              className="flex items-center gap-3"
-              aria-label="CODANTIS inicio"
-            >
-              <div className="relative h-9 w-9 shrink-0">
-                <Image
-                  src="/icon.svg"
-                  alt="CODANTIS"
-                  fill
-                  sizes="36px"
-                  className="object-contain"
-                />
-              </div>
-
-              <div className="leading-none">
-                <div className="text-sm font-semibold tracking-[0.12em]">
-                  CODANTIS
-                </div>
-
-                <div className="mt-1 text-[7px] font-medium tracking-[0.28em] text-[#737373]">
-                  ODONTOLOGÍA INTEGRAL
-                </div>
-              </div>
-            </Link>
-
-            <Link
-              href={whatsappData.citaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#5B0AB3] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#6D14C8] hover:shadow-lg"
-            >
-              Agendar cita
-              <ArrowUpRight size={16} />
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       {/* =======================================================
           HERO
