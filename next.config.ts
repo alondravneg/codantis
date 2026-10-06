@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         destination: "/ortodoncista",
         permanent: true,
       },
+      {
+        source: "/periodoncistas-en-monterrey",
+        destination: "/periodoncista",
+        permanent: true,
+      },
     ];
   },
 };
