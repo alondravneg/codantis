@@ -20,6 +20,7 @@ import Footer from "@/components/layout/Footer";
 import TreatmentsSection from "@/components/common/TreatmentsSection";
 import TrustStats from "@/components/common/TrustStats";
 import { whatsappData } from "@/lib/whatsapp";
+import DoctorProfiles from "../common/DoctorProfiles";
 
 const faqs = [
   {
@@ -258,117 +259,7 @@ export default function DentistasCumbresPage() {
         </div>
       </section>
 
-      {/* =======================================================
-          DOCTORS
-      ======================================================= */}
-
-      <section className="bg-[#F8F5F1] px-6 py-24 lg:px-8 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="max-w-3xl"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#7C6C87]">
-              Nuestro equipo
-            </p>
-
-            <h2 className="mt-5 font-[var(--font-heading)] text-5xl font-normal leading-[0.97] tracking-[-0.035em] text-[#222126] sm:text-6xl">
-              Conoce a quienes están
-              <br />
-              detrás de tu
-              <span className="italic text-[#5B0AB3]">
-                {" "}
-                sonrisa.
-              </span>
-            </h2>
-
-            <p className="mt-6 max-w-2xl text-base leading-7 text-[#716A73]">
-              Un equipo que trabaja para acompañarte en cada etapa de tu
-              atención dental.
-            </p>
-          </motion.div>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-
-            {/* Doctor */}
-            <motion.article
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="overflow-hidden rounded-[2.5rem] bg-white shadow-[0_15px_45px_rgba(46,30,20,0.05)]"
-            >
-              <div className="relative aspect-[4/4.6] overflow-hidden bg-[#E9DDEB]">
-                <Image
-                  src="/img/DrRodolfoMendoza.jpeg"
-                  alt="Dr. Rodolfo Mendoza Rocha"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="p-7 sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8A7E8C]">
-                  Director / Odontólogo
-                </p>
-
-                <h3 className="mt-3 font-[var(--font-heading)] text-4xl text-[#29242C]">
-                  Dr. Rodolfo Mendoza Rocha
-                </h3>
-
-                <p className="mt-4 text-sm leading-6 text-[#716A73]">
-                  Parte del equipo fundador de CODANTIS, enfocado en brindar
-                  atención cercana y personalizada a cada paciente.
-                </p>
-              </div>
-            </motion.article>
-
-            {/* Dra */}
-            <motion.article
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                duration: 0.7,
-                delay: 0.08,
-                ease: "easeOut",
-              }}
-              className="overflow-hidden rounded-[2.5rem] bg-white shadow-[0_15px_45px_rgba(46,30,20,0.05)]"
-            >
-              <div className="relative aspect-[4/4.6] overflow-hidden bg-[#E9DDEB]">
-                <Image
-                  src="/img/DraJannethPerez.jpeg"
-                  alt="Dra. Claudia Janneth Pérez Chapa"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="p-7 sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8A7E8C]">
-                  Directora / Odontóloga
-                </p>
-
-                <h3 className="mt-3 font-[var(--font-heading)] text-4xl text-[#29242C]">
-                  Dra. Claudia Janneth Pérez Chapa
-                </h3>
-
-                <p className="mt-4 text-sm leading-6 text-[#716A73]">
-                  Parte del equipo fundador de CODANTIS, comprometida con
-                  brindar una experiencia dental humana y personalizada.
-                </p>
-              </div>
-            </motion.article>
-
-          </div>
-        </div>
-      </section>
+      <DoctorProfiles />
 
       {/* =======================================================
           STATS
