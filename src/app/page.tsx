@@ -25,6 +25,7 @@ import { useState, useEffect } from "react";
 import { whatsappData } from "@/lib/whatsapp";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import Link from "next/link";
 
 const services = [
   {
@@ -33,6 +34,7 @@ const services = [
     title: "Ortodoncia",
     description:
       "Tratamientos personalizados para alinear tu sonrisa y acompañarte durante todo el proceso.",
+    href:"",
   },
   {
     number: "02",
@@ -40,6 +42,7 @@ const services = [
     title: "Implantes dentales",
     description:
       "Opciones integrales para recuperar funcionalidad, seguridad y naturalidad.",
+    href:"",
   },
   {
     number: "03",
@@ -47,6 +50,7 @@ const services = [
     title: "Sedación consciente",
     description:
       "Métodos seguros y efectivos para garantizar tu comodidad durante los tratamientos.",
+    href: "/sedacion-consciente-en-monterrey",
   },
   {
     number: "04",
@@ -54,6 +58,7 @@ const services = [
     title: "Estética dental",
     description:
       "Diseñamos tratamientos enfocados en la armonía y naturalidad de tu sonrisa.",
+    href:"",
   },
   {
     number: "05",
@@ -61,6 +66,7 @@ const services = [
     title: "Prevención y limpieza",
     description:
       "Cuida tu salud bucal con revisiones y limpieza profesional de forma periódica.",
+    href:"",
   },
 ];
 
@@ -410,47 +416,55 @@ export default function Home() {
                 const Icon = service.icon;
 
                 return (
-                  <motion.article
-                    key={service.title}
-                    variants={fadeUp}
-                    whileHover={{ y: -6 }}
-                    transition={{ duration: 0.25 }}
-                    className="group relative overflow-hidden rounded-[1.75rem] border border-[#E7DED5] bg-white p-6 shadow-[0_12px_35px_rgba(46,30,20,0.04)] transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(46,30,20,0.08)] sm:p-7"
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="group block h-full"
                   >
-                    {/* Icon + number */}
-                    <div className="flex items-start justify-between">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#EFE8F8] text-[#5B0AB3] transition-transform duration-300 group-hover:rotate-6">
-                        <Icon size={20} strokeWidth={1.7} />
+                    <motion.article
+                      variants={fadeUp}
+                      whileHover={{ y: -6 }}
+                      transition={{ duration: 0.25 }}
+                      className="relative flex h-full min-h-[280px] flex-col overflow-hidden rounded-[1.75rem] border border-[#E7DED5] bg-white p-6 shadow-[0_12px_35px_rgba(46,30,20,0.04)] transition-shadow duration-300 hover:shadow-[0_20px_45px_rgba(46,30,20,0.08)] sm:p-7"
+                    >
+                      {/* Icon + number */}
+                      <div className="flex items-start justify-between">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#EFE8F8] text-[#5B0AB3] transition-transform duration-300 group-hover:rotate-6">
+                          <Icon size={20} strokeWidth={1.7} />
+                        </div>
+
+                        <span className="font-[var(--font-heading)] text-3xl text-[#E8E0EC]">
+                          {service.number}
+                        </span>
                       </div>
 
-                      <span className="font-[var(--font-heading)] text-3xl text-[#E8E0EC]">
-                        {service.number}
-                      </span>
-                    </div>
+                      {/* Content */}
+                      <div className="mt-8">
+                        <h3 className="text-lg font-semibold text-[#252328]">
+                          {service.title}
+                        </h3>
 
-                    {/* Title */}
-                    <h3 className="mt-8 text-lg font-semibold text-[#252328]">
-                      {service.title}
-                    </h3>
+                        <p className="mt-3 text-sm leading-6 text-[#747078]">
+                          {service.description}
+                        </p>
+                      </div>
 
-                    {/* Description */}
-                    <p className="mt-3 text-sm leading-6 text-[#747078]">
-                      {service.description}
-                    </p>
+                      {/* Link indicator */}
+                      <div className="mt-auto pt-7">
+                        <div className="flex items-center gap-2 text-sm font-semibold text-[#5B0AB3]">
+                          <span>Conocer más</span>
 
-                    {/* Link */}
-                    <div className="mt-7 flex items-center gap-2 text-sm font-semibold text-[#5B0AB3]">
-                      <span>Conocer más</span>
+                          <ArrowUpRight
+                            size={15}
+                            className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          />
+                        </div>
+                      </div>
 
-                      <ArrowUpRight
-                        size={15}
-                        className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      />
-                    </div>
-
-                    {/* Hover glow */}
-                    <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full bg-[#F3EAFB] opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
-                  </motion.article>
+                      {/* Hover glow */}
+                      <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full bg-[#F3EAFB] opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
+                    </motion.article>
+                  </Link>
                 );
               })}
             </motion.div>
