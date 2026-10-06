@@ -48,6 +48,14 @@ export const services = [
       "Tratamientos especializados para salvar dientes dañados y aliviar el dolor.",
     href: "/endodoncistas-en-monterrey",
   },
+    {
+    number: "05",
+    icon: EyeClosed,
+    title: "Odontopediatría",
+    description:
+      "Tratamientos especializados para la salud dental de niños y adolescentes.",
+    href: "/odontopediatria-en-monterrey",
+  },
   {
     number: "0",
     icon: HeartPulse,
