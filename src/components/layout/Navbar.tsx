@@ -15,7 +15,7 @@ const navLinks = [
   },
   {
     label: "Nuestra experiencia",
-    href: "/#experiencia",
+    href: "/dentistas-en-cumbres-monterrey",
   },
   {
     label: "Tu visita",
