@@ -1,8 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  async redirects() {
+    return [
+      {
+        source: "/los-dentistas-mas-recomendados-en-monterrey",
+        destination: "/nosotros",
+        permanent: true,
+      },
+      {
+        source: "/dentistas-en-cumbres-monterrey",
+        destination: "/nosotros",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

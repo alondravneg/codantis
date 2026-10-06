@@ -419,7 +419,7 @@ export default function Home() {
               </motion.div>
               <motion.div variants={fadeUp} className="mt-8">
                 <Link
-                  href="/dentistas-en-cumbres-monterrey"
+                  href="/nosotros"
                   className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#5B0AB3] min-h-12 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#6D14C8] hover:shadow-[0_20px_45px_rgba(91,10,179,0.22)] w-full sm:w-auto"
                 >
                   Conócenos

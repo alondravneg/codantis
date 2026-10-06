@@ -1,4 +1,4 @@
-import DentistasCumbresPage from "@/components/pages/DentistasCumbresPage";
+import NosotrosPage from "@/components/pages/NosotrosPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <DentistasCumbresPage />;
+  return <NosotrosPage />;
 }
