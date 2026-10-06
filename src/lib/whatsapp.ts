@@ -1,3 +1,6 @@
+import { m } from "framer-motion";
+import { b } from "framer-motion/client";
+
 const whatsappNumber = "528112399492";
 
 const whatsappMsgCita = encodeURIComponent(
@@ -20,6 +23,10 @@ const whatsappMsgSedacion = encodeURIComponent(
   "Hola, me gustaría obtener más información sobre la sedación consciente en CODANTIS"
 );
 
+const whatsappMsgBlanqueamiento = encodeURIComponent(
+  "Hola, me gustaría obtener más información sobre el blanqueamiento dental en CODANTIS"
+);
+
 export const whatsappData = {
   number: whatsappNumber,
 
@@ -28,10 +35,12 @@ export const whatsappData = {
   msgUbicacion: whatsappMsgUbicacion,
   msgContacto: whatsappMsgContacto,
   msgSedacion: whatsappMsgSedacion,
+  msgBlanqueamiento: whatsappMsgBlanqueamiento,
 
   citaUrl: `https://wa.me/${whatsappNumber}?text=${whatsappMsgCita}`,
   horariosUrl: `https://wa.me/${whatsappNumber}?text=${whatsappMsgHorarios}`,
   ubicacionUrl: `https://wa.me/${whatsappNumber}?text=${whatsappMsgUbicacion}`,
   contactoUrl: `https://wa.me/${whatsappNumber}?text=${whatsappMsgContacto}`,
   sedacionUrl: `https://wa.me/${whatsappNumber}?text=${whatsappMsgSedacion}`,
+  blanqueamientoUrl: `https://wa.me/${whatsappNumber}?text=${whatsappMsgBlanqueamiento}`,
 };

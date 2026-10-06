@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Sparkles,
   Stethoscope,
+  ToothbrushSparkles,
   X,
 } from "lucide-react";
 import {
@@ -67,6 +68,14 @@ const services = [
     description:
       "Cuida tu salud bucal con revisiones y limpieza profesional de forma periódica.",
     href:"",
+  },
+    {
+    number: "06",
+    icon: ToothbrushSparkles,
+    title: "Blanqueamiento dental",
+    description:
+      "Tratamiento seguro y efectivo para mejorar el color de tus dientes y resaltar tu sonrisa.",
+    href:"/blanqueamiento-dental-en-monterrey",
   },
 ];
 
