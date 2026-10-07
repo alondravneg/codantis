@@ -6,7 +6,6 @@ import {
   Mail,
   MapPin,
   MessageCircle,
-  Navigation,
   Phone,
 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
@@ -15,6 +14,7 @@ import { useState } from "react";
 import { whatsappData } from "@/lib/whatsapp";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import Image from "next/image";
 
 const address =
   "C. 15a Avenida 948-2 Sector, Colonial Cumbres, 64610 Monterrey, N.L.";
@@ -228,6 +228,7 @@ export default function ContactoPage() {
             }}
             className="overflow-hidden rounded-[2rem] border border-[#E7DED5] bg-white shadow-[0_20px_60px_rgba(46,30,20,0.06)]"
           >
+            {/* Map header */}
             <div className="flex items-center justify-between border-b border-[#EEE7DF] px-5 py-4 sm:px-6">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8B8188]">
@@ -242,6 +243,79 @@ export default function ContactoPage() {
               <MapPin size={19} strokeWidth={1.8} className="text-[#5B0AB3]" />
             </div>
 
+            {/* Navigation buttons */}
+            <div className="grid gap-3 px-5 pb-5 pt-5 sm:grid-cols-2 sm:px-6">
+              {/* Google Maps */}
+              <a
+                href={googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between rounded-2xl border border-[#E5DDE8] bg-[#FDFCFD] px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#CDB9D8] hover:bg-white hover:shadow-[0_10px_25px_rgba(91,10,179,0.07)]"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                    <Image
+                      src="/img/icons/google-maps.svg"
+                      alt="Google Maps"
+                      width={20}
+                      height={20}
+                      className="h-5 w-5 object-contain"
+                    />
+                  </div>
+
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#8B8188]">
+                      Cómo llegar
+                    </p>
+
+                    <p className="mt-0.5 text-sm font-semibold text-[#302C31]">
+                      Google Maps
+                    </p>
+                  </div>
+                </div>
+
+                <ArrowUpRight
+                  size={16}
+                  className="text-[#8A7E8E] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#5B0AB3]"
+                />
+              </a>
+
+              {/* Waze */}
+              <a
+                href={wazeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between rounded-2xl border border-[#E5DDE8] bg-[#FDFCFD] px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#CDB9D8] hover:bg-white hover:shadow-[0_10px_25px_rgba(91,10,179,0.07)]"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                    <Image
+                      src="/img/icons/waze.svg"
+                      alt="Waze"
+                      width={20}
+                      height={20}
+                      className="h-5 w-5 object-contain"
+                    />
+                  </div>
+
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#8B8188]">
+                      Cómo llegar
+                    </p>
+
+                    <p className="mt-0.5 text-sm font-semibold text-[#302C31]">
+                      Waze
+                    </p>
+                  </div>
+                </div>
+
+                <ArrowUpRight
+                  size={16}
+                  className="text-[#8A7E8E] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#5B0AB3]"
+                />
+              </a>
+            </div>
+
             {/* MAP FRAME */}
             <div className="relative min-h-[420px] bg-[#EDE8E1] sm:min-h-[520px]">
               <iframe
@@ -254,80 +328,6 @@ export default function ContactoPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* =======================================================
-          NAVIGATION BUTTONS
-      ======================================================= */}
-
-      <section className="px-6 pb-24 lg:px-8 lg:pb-32">
-        <div className="mx-auto max-w-7xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeUp}
-            className="grid gap-4 sm:grid-cols-2"
-          >
-            {/* Google Maps */}
-            <a
-              href={googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex min-h-[150px] flex-col justify-between rounded-[2rem] border border-[#DDD3E2] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9B4D8] hover:shadow-[0_20px_45px_rgba(46,30,20,0.07)] sm:p-8"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#EFE8F8] text-[#5B0AB3]">
-                  <MapPin size={19} />
-                </div>
-
-                <ArrowUpRight
-                  size={19}
-                  className="text-[#8A7E8E] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-                />
-              </div>
-
-              <div className="mt-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8B8188]">
-                  Cómo llegar
-                </p>
-
-                <h3 className="mt-2 text-lg font-semibold text-[#29262B]">
-                  Abrir en Google Maps
-                </h3>
-              </div>
-            </a>
-
-            {/* Waze */}
-            <a
-              href={wazeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex min-h-[150px] flex-col justify-between rounded-[2rem] border border-[#DDD3E2] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9B4D8] hover:shadow-[0_20px_45px_rgba(46,30,20,0.07)] sm:p-8"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#EFE8F8] text-[#5B0AB3]">
-                  <Navigation size={19} />
-                </div>
-
-                <ArrowUpRight
-                  size={19}
-                  className="text-[#8A7E8E] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-                />
-              </div>
-
-              <div className="mt-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8B8188]">
-                  Cómo llegar
-                </p>
-
-                <h3 className="mt-2 text-lg font-semibold text-[#29262B]">
-                  Abrir en Waze
-                </h3>
-              </div>
-            </a>
           </motion.div>
         </div>
       </section>
