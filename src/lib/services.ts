@@ -2,7 +2,6 @@ import {
   EyeClosed,
   HeartPulse,
   ShieldCheck,
-  Sparkles,
   Stethoscope,
   ToothbrushSparkles,
 } from "lucide-react";
@@ -10,7 +9,7 @@ import {
 export const services = [
   {
     number: "01",
-    icon: Sparkles,
+    icon: "img/icons/ortodoncia.svg",
     title: "Ortodoncia",
     description:
       "Tratamientos personalizados para alinear tu sonrisa y acompañarte durante todo el proceso.",
@@ -18,7 +17,7 @@ export const services = [
   },
   {
     number: "02",
-    icon: Stethoscope,
+    icon: "img/icons/implante.svg",
     title: "Implantes dentales",
     description:
       "Recupera la estética y funcionalidad de tu sonrisa con implantes dentales, una solución estable y duradera para reemplazar dientes perdidos.",
@@ -26,7 +25,7 @@ export const services = [
   },
   {
     number: "03",
-    icon: EyeClosed,
+    icon: "img/icons/sedacion.svg",
     title: "Sedación consciente",
     description:
       "Métodos seguros y efectivos para garantizar tu comodidad durante los tratamientos.",
@@ -34,7 +33,7 @@ export const services = [
   },
   {
     number: "04",
-    icon: ToothbrushSparkles,
+    icon: "img/icons/blanqueamiento.svg",
     title: "Blanqueamiento dental",
     description:
       "Tratamientos profesionales para lograr una sonrisa más brillante y saludable.",
@@ -42,7 +41,7 @@ export const services = [
   },
   {
     number: "05",
-    icon: EyeClosed,
+    icon: "img/icons/endodoncia.svg",
     title: "Endodoncia",
     description:
       "Tratamientos especializados para salvar dientes dañados y aliviar el dolor.",
@@ -50,7 +49,7 @@ export const services = [
   },
   {
     number: "06",
-    icon: EyeClosed,
+    icon: "img/icons/periodoncia.svg",
     title: "Periodoncia",
     description:
       "Tratamientos especializados para la salud de las encías y los tejidos de soporte dental.",
@@ -58,7 +57,7 @@ export const services = [
   },
   {
     number: "07",
-    icon: EyeClosed,
+    icon: "img/icons/odontopediatria.svg",
     title: "Odontopediatría",
     description:
       "Tratamientos especializados para la salud dental de niños y adolescentes.",
@@ -66,7 +65,7 @@ export const services = [
   },
   {
     number: "08",
-    icon: HeartPulse,
+    icon: "img/icons/rehabilitacion.svg",
     title: "Rehabilitación dental",
     description:
       "Recupera la funcionalidad y estética de tu sonrisa con tratamientos de rehabilitación dental personalizados.",
@@ -74,7 +73,7 @@ export const services = [
   },
   {
     number: "09",
-    icon: ShieldCheck,
+    icon: "img/icons/limpieza.svg",
     title: "Prevención y limpieza",
     description:
       "Cuida tu salud bucal con revisiones y limpieza profesional de forma periódica.",
