@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  ArrowUpRight,
   Clock3,
   Mail,
   MapPin,
