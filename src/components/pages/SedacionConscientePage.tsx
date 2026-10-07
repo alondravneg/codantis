@@ -59,25 +59,6 @@ const benefits = [
   },
 ];
 
-const stats = [
-  {
-    value: "+15",
-    label: "Años de experiencia",
-  },
-  {
-    value: "+1",
-    label: "Clínica de especialidades",
-  },
-  {
-    value: "+2",
-    label: "Odontólogos generales y especialistas",
-  },
-  {
-    value: "+90",
-    label: "Clientes empresariales",
-  },
-];
-
 const faqs = [
   {
     question:
@@ -422,33 +403,6 @@ export default function SedacionConscientePage() {
             </motion.div>
           </AnimatePresence>
 
-        </div>
-      </section>
-
-      {/* =======================================================
-          STATS
-      ======================================================= */}
-
-      <section className="border-y border-[#E8E0D8] bg-white/70">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[#E8E0D8] px-6 sm:grid-cols-4 sm:divide-y-0 lg:px-8">
-          {stats.map((stat) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="px-5 py-8 sm:px-6 sm:py-10"
-            >
-              <div className="font-[var(--font-heading)] text-4xl text-[#5B0AB3] sm:text-5xl">
-                {stat.value}
-              </div>
-
-              <p className="mt-3 max-w-[170px] text-xs leading-5 text-[#777279]">
-                {stat.label}
-              </p>
-            </motion.div>
-          ))}
         </div>
       </section>
 
