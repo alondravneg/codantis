@@ -236,16 +236,13 @@ export default function Home() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/5" />
 
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 sm:bottom-8 sm:left-8 sm:right-8">
-                  <div className="rounded-2xl border border-white/20 bg-black/20 px-4 py-3 text-white backdrop-blur-md">
+                <div className="absolute left-6 right-6 flex items-end justify-between gap-4 sm:top-5 sm:left-8 sm:right-8">
+                  <div className="absolute right-6 top-[20%] rounded-2xl border border-white/20 bg-black/20 px-4 py-3 text-white backdrop-blur-md">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-70">
                       CODANTIS
                     </p>
-                    <p className="mt-1 text-sm">Un espacio pensado para ti.</p>
-                  </div>
 
-                  <div className="hidden h-14 w-14 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-md sm:flex">
-                    <ArrowUpRight size={20} />
+                    <p className="mt-1 text-sm">Un espacio pensado para ti.</p>
                   </div>
                 </div>
               </div>

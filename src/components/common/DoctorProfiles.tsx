@@ -15,14 +15,6 @@ type Doctor = {
 
 const doctors: Doctor[] = [
   {
-    name: "Dr. Rodolfo Mendoza Rocha",
-    role: "Odontólogo",
-    image: "/img/DrRodolfoMendoza.jpeg",
-    education: [],
-    certifications: [],
-    focus: [],
-  }, 
-  {
     name: "Dra. Claudia Janneth Pérez Chapa",
     role: "Ortodoncista",
     image: "/img/DraJannethPerez.jpeg",
@@ -31,8 +23,19 @@ const doctors: Doctor[] = [
       "Certificación en Ortodoncia con Alineadores Dentales",
       "Certificado en Ortodoncia Autoligable",
       "Ortodoncia Interceptiva en Niños",
-      "Manejo de Mini Implantes"
+      "Manejo de Mini Implantes",
     ],
+    focus: [],
+  },
+  {
+    name: "Dr. Rodolfo Mendoza Rocha",
+    role: "Odontólogo",
+    image: "/img/DrRodolfoMendoza.jpeg",
+    education: [
+      "Odontología · UANL",
+      "Especialidad Cirugía Oral e Implantología",
+    ],
+    certifications: [],
     focus: [],
   },
 ];
@@ -192,11 +195,11 @@ export default function DoctorProfiles() {
                         Certificaciones
                       </p>
 
-                      <div className="mt-4 flex flex-wrap gap-2.5">
+                      <div className="mt-4 space-y-2.5">
                         {doctor.certifications.map((item) => (
                           <span
                             key={item}
-                            className="rounded-full border border-[#D9CBE0] bg-white px-4 py-2 text-xs font-medium leading-5 text-[#5B5060]"
+                            className="block w-fit rounded-full border border-[#D9CBE0] bg-white px-4 py-2 text-xs font-medium leading-5 text-[#5B5060]"
                           >
                             {item}
                           </span>
