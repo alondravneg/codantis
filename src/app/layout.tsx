@@ -4,6 +4,7 @@ import { Noto_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import FloatingWhatsapp from "@/components/layout/FloatingWhatsapp";
+import BackToTop from "@/components/common/BackToTop";
 
 const playfairDisplayHeading = Playfair_Display({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-[#F8F5F1] font-sans text-[#222222]">
         {children}
+        <BackToTop />
         <FloatingWhatsapp />
       </body>
     </html>

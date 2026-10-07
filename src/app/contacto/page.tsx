@@ -244,13 +244,13 @@ export default function ContactoPage() {
             </div>
 
             {/* Navigation buttons */}
-            <div className="grid gap-3 px-5 pb-5 pt-5 sm:grid-cols-2 sm:px-6">
+            <div className="grid gap-3 px-5 pb-5 pt-5 sm:grid-cols-2 sm:px-6 ">
               {/* Google Maps */}
               <a
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-2xl border border-[#E5DDE8] bg-[#FDFCFD] px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#CDB9D8] hover:bg-white hover:shadow-[0_10px_25px_rgba(91,10,179,0.07)]"
+                className="group flex items-center justify-between rounded-2xl border border-[#E5DDE8] bg-[#5b0ab3]/15 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#CDB9D8] hover:bg-white hover:shadow-[0_10px_25px_rgba(91,10,179,0.07)]"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
@@ -285,7 +285,7 @@ export default function ContactoPage() {
                 href={wazeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-2xl border border-[#E5DDE8] bg-[#FDFCFD] px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#CDB9D8] hover:bg-white hover:shadow-[0_10px_25px_rgba(91,10,179,0.07)]"
+                className="group flex items-center justify-between rounded-2xl border border-[#E5DDE8] bg-[#5b0ab3]/15 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#CDB9D8] hover:bg-white hover:shadow-[0_10px_25px_rgba(91,10,179,0.07)]"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
