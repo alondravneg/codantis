@@ -45,6 +45,25 @@ const fadeUp: Variants = {
   },
 };
 
+function SocialMaskIcon({ src }: { src: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className="h-4 w-4 shrink-0 bg-current transition-transform duration-300 group-hover:scale-110"
+      style={{
+        maskImage: `url(${src})`,
+        WebkitMaskImage: `url(${src})`,
+        maskRepeat: "no-repeat",
+        WebkitMaskRepeat: "no-repeat",
+        maskPosition: "center",
+        WebkitMaskPosition: "center",
+        maskSize: "contain",
+        WebkitMaskSize: "contain",
+      }}
+    />
+  );
+}
+
 export default function ContactoPage() {
   const [emailCopied, setEmailCopied] = useState(false);
 
@@ -112,13 +131,11 @@ export default function ContactoPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7C6C87]">
               Nuestra sucursal
             </p>
-
             <h2 className="mt-5 max-w-md font-[var(--font-heading)] text-4xl font-normal leading-[0.98] tracking-[-0.035em] text-[#272329] sm:text-5xl">
               Tu próxima visita
               <br />
               <span className="italic text-[#5B0AB3]">comienza aquí.</span>
             </h2>
-
             <div className="mt-10 space-y-7">
               {/* Address */}
               <div className="flex items-start gap-4">
@@ -201,12 +218,56 @@ export default function ContactoPage() {
               </div>
             </div>
 
+            {/* Social media */}
+            <div className="mt-8 border-t border-[#D8CCBE] pt-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#7C6C87]">
+                También estamos en redes
+              </p>
+
+              <p className="mt-2 text-sm leading-6 text-[#6F6870]">
+                Síguenos y conoce más sobre CODANTIS y el cuidado de tu sonrisa.
+              </p>
+
+              <div className="mt-4 flex flex-wrap gap-3">
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/codantis_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram de CODANTIS"
+                  className="group inline-flex items-center gap-2 rounded-full border border-[#D9CBE0] bg-white/70 px-4 py-2.5 text-sm font-medium text-[#5B0AB3] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C8A7FF] hover:bg-[#EDE6FA]"
+                >
+                  <SocialMaskIcon src="/img/icons/instagram.svg" />
+                  Instagram
+                  <ArrowUpRight
+                    size={14}
+                    className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </a>
+
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/share/1F7BbZFzQ6/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook de CODANTIS"
+                  className="group inline-flex items-center gap-2 rounded-full border border-[#D9CBE0] bg-white/70 px-4 py-2.5 text-sm font-medium text-[#5B0AB3] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#C8A7FF] hover:bg-[#EDE6FA]"
+                >
+                  <SocialMaskIcon src="/img/icons/facebook.svg" />
+                  Facebook
+                  <ArrowUpRight
+                    size={14}
+                    className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </a>
+              </div>
+            </div>
             {/* WhatsApp */}
             <a
               href={whatsappData.contactoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-10 flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#5B0AB3] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#6D14C8] hover:shadow-[0_18px_40px_rgba(91,10,179,0.2)]"
+              className="group mt-7 flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#5B0AB3] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#6D14C8] hover:shadow-[0_18px_40px_rgba(91,10,179,0.2)]"
             >
               <MessageCircle size={18} />
               Contáctanos por WhatsApp

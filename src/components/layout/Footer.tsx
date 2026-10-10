@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Clock3,
   Mail,
@@ -56,6 +57,88 @@ export default function Footer() {
                 Dentistas con décadas de experiencia en Cumbres, Monterrey, N.L.
                 que te acompañan en cada etapa de tu sonrisa.
               </p>
+            </div>
+            {/* Social media */}
+            <div className="mt-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
+                Sigamos en contacto
+              </p>
+              <div>
+                <p className="max-w-xs text-sm leading-6 text-white/55">
+                  Conoce más sobre nuestra clínica, tratamientos y consejos para
+                  cuidar tu sonrisa.
+                </p>
+              </div>
+
+              <div className="mt-4 flex items-center gap-3">
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/codantis_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram de CODANTIS"
+                  title="Instagram"
+                  className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white/75 transition-all duration-300 hover:-translate-y-1 hover:border-[#C8A7FF]/50 hover:bg-[#5B0AB3]/40 hover:text-[#C8A7FF]"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="h-5 w-5 bg-current transition-transform duration-300 group-hover:scale-110"
+                    style={{
+                      maskImage: "url('/img/icons/instagram.svg')",
+                      WebkitMaskImage: "url('/img/icons/instagram.svg')",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskSize: "contain",
+                      WebkitMaskSize: "contain",
+                    }}
+                  />
+                </a>
+
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/share/1F7BbZFzQ6/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook de CODANTIS"
+                  title="Facebook"
+                  className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/65 transition-all duration-300 hover:-translate-y-1 hover:border-[#C8A7FF]/40 hover:bg-[#5B0AB3]/30 hover:text-white"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="h-5 w-5 bg-current transition-transform duration-300 group-hover:scale-110"
+                    style={{
+                      maskImage: "url('/img/icons/facebook.svg')",
+                      WebkitMaskImage: "url('/img/icons/facebook.svg')",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskSize: "contain",
+                      WebkitMaskSize: "contain",
+                    }}
+                  />
+                </a>
+
+                {/* WhatsApp */}
+                <a
+                  href={whatsappData.contactoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp de CODANTIS"
+                  title="WhatsApp"
+                  className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] transition-all duration-300 hover:-translate-y-1 hover:border-[#C8A7FF]/40 hover:bg-[#5B0AB3]/30"
+                >
+                  <Image
+                    src="/img/icons/whatsapp.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="h-5 w-5 object-contain transition-transform duration-300 group-hover:scale-110"
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -140,9 +223,7 @@ export default function Footer() {
                   {emailCopied ? (
                     <span className="text-[#C8A7FF]">¡Correo copiado!</span>
                   ) : (
-                    <span>
-                      drrodolfo@codantis.com.mx
-                    </span>
+                    <span>drrodolfo@codantis.com.mx</span>
                   )}
                 </button>
               </div>

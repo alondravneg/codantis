@@ -19,6 +19,7 @@ const navLinks = [
   },
   {
     label: "Tu visita",
+
     href: "/#proceso",
   },
   {
@@ -26,6 +27,25 @@ const navLinks = [
     href: "/contacto",
   },
 ];
+
+function SocialMaskIcon({ src }: { src: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className="h-5 w-5 shrink-0 bg-current transition-transform duration-300 group-hover:scale-110"
+      style={{
+        maskImage: `url(${src})`,
+        WebkitMaskImage: `url(${src})`,
+        maskRepeat: "no-repeat",
+        WebkitMaskRepeat: "no-repeat",
+        maskPosition: "center",
+        WebkitMaskPosition: "center",
+        maskSize: "contain",
+        WebkitMaskSize: "contain",
+      }}
+    />
+  );
+}
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -229,6 +249,46 @@ export default function Navbar() {
                     Agendar cita por WhatsApp
                     <ArrowUpRight size={16} />
                   </motion.a>
+
+                  {/* Social media */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.4,
+                      ease: "easeOut",
+                    }}
+                    className="mt-5 border-t border-[#EEE8EE] pt-4"
+                  >
+                    <p className="px-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#918694]">
+                      Encuéntramos también en
+                    </p>
+
+                    <div className="mt-3 flex items-center gap-3 px-2">
+                      {/* Instagram */}
+                      <a
+                        href="https://www.instagram.com/codantis_"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram de CODANTIS"
+                        className="group flex h-11 w-11 items-center justify-center rounded-full border border-[#E5DCEB] bg-[#F8F5FB] text-[#5B0AB3] transition-all duration-300 hover:-translate-y-1 hover:border-[#C8A7FF] hover:bg-[#EDE6FA]"
+                      >
+                        <SocialMaskIcon src="/img/icons/instagram.svg" />
+                      </a>
+
+                      {/* Facebook */}
+                      <a
+                        href="https://www.facebook.com/share/1F7BbZFzQ6/?mibextid=wwXIfr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook de CODANTIS"
+                        className="group flex h-11 w-11 items-center justify-center rounded-full border border-[#E5DCEB] bg-[#F8F5FB] text-[#5B0AB3] transition-all duration-300 hover:-translate-y-1 hover:border-[#C8A7FF] hover:bg-[#EDE6FA]"
+                      >
+                        <SocialMaskIcon src="/img/icons/facebook.svg" />
+                      </a>
+                    </div>
+                  </motion.div>
 
                   {/* Footer */}
                   <div className="mt-5 flex items-center justify-between px-2 text-[9px] font-medium uppercase tracking-[0.18em] text-[#AAA1AA]">
